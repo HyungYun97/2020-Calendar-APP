@@ -1,0 +1,196 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="#000"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="2020년 월간 달력"
+            android:textSize="20dp"
+            android:textColor="#FFF"/>
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/todaydate"
+            android:text="오늘"/>
+        <EditText
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="날짜"
+            android:visibility="invisible"
+            android:textColor="#fff"
+            android:id="@+id/to1">
+
+        </EditText>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="보기 방식"/>
+    </LinearLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="약속 제목"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:id="@+id/memo1"
+            android:enabled="false">
+        </EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="시작 시간 날짜"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:id="@+id/memo2"
+            android:enabled="false">
+        </EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="종료 시간 날짜"
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:id="@+id/memo3"
+            android:enabled="false">
+        </EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="장소"
+            android:id="@+id/memo4"
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:enabled="false">
+        </EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="메모"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:id="@+id/memo5"
+            android:enabled="false">
+        </EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="불러온 일정"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:id="@+id/memo6"
+            android:enabled="false">
+        </EditText>
+
+    </TableLayout>
+
+    <!--요일-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="top"
+        android:background="#eaeae9"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="일"
+            android:textSize="9sp"
+            android:textColor="#FF0000" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="월"
+            android:textColor="#000000"
+            android:textSize="9sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="화"
+            android:textColor="#000000"
+            android:textSize="9sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="수"
+            android:textColor="#000000"
+            android:textSize="9sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="목"
+            android:textColor="#000000"
+            android:textSize="9sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="금"
+            android:textColor="#000000"
+            android:textSize="9sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:text="토"
+            android:textSize="9sp"
+            android:textColor="#0067a3"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollview">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calendarLayout"
+            android:orientation="vertical"
+            android:layout_gravity="top">
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
